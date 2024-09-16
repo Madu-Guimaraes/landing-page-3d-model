@@ -126,4 +126,4 @@
 
 ## Link para o deploy 🌐
 
-[Projeto Lady's Bag - Landing Page](https://madu-guimaraes.github.io/landing-page-3d-model/#sobre)
+[Projeto Lady's Bag - Landing Page](https://madu-guimaraes.github.io/landing-page-3d-model/)
