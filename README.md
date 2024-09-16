@@ -1,6 +1,6 @@
 # Lady's Bag - Landing Page 👜
 
-![imagem-final]()
+![imagem-final](https://github.com/user-attachments/assets/b356917a-4465-4ebf-853f-955c83b19056)
 
 ## Visão Geral 💡
 
