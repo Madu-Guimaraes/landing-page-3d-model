@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon.png">
+    <meta name="description" content="Descubra a elegância e versatilidade em cada detalhe. Nossa loja oferece bolsas para todas as ocasiões e estilos, combinando qualidade e sofisticação. 
+    Encontre a bolsa perfeita para você!">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/menu.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    
+    <title>Landing Page - Lady's Bag</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#">
+                <img src="./src/images/logo.png" alt="Logo Lady's Bag" class="logo-imagem">
+                <span>Lady’s Bag</span>
+            </a>
+        </div>
+
+        <nav class="navegacao">
+            <input type="checkbox" id="menu-hamburguer" />
+
+            <label for="menu-hamburguer">
+                <div class="menu">
+                    <span class="hamburguer"></span>
+                </div>
+            </label>
+
+            <ul>
+                <li class="menu-item"><a href="#inicio">Início</a></li>
+                <li class="menu-item"><a href="#sobre">Sobre</a></li>
+                <li class="menu-item"><a href="#produtos">Produtos</a></li>
+                <li class="menu-item"><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="secao-3d">
+            <div id="root-3d-bolsa"></div>
+        </section>
+
+        <section class="inicio" id="inicio">
+            <div class="conteudo-inicio">
+                <h2 class="titulo">Bolsas que Inspiram!</h2>
+                <h2 class="titulo">Sua Companheira em Cada Jornada.</h2>
+                <p class="descricao">Descubra a coleção de bolsas que combinam elegância atemporal, qualidade impecável e versatilidade para o dia a dia da mulher moderna.</p>
+            
+                <div class="secao-btn-cta">
+                    <button class="btn-cta">Expresse Sua Personalidade</button>
+                    <span class="descricao-btn">+5,000 pessoas já compraram este produto.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="seta-voltar-topo mostrar">
+            <button class="seta-voltar" id="seta-voltar">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="conteudo-sobre">
+                <h3>Sobre Nós</h3>
+                <p class="descricao-sobre">Na Lady’s Bag, a bolsa é uma extensão da sua personalidade. Acompanhamos você do trabalho aos momentos de lazer, expressando seu estilo único e elevando seu look.</p>
+                <p class="descricao-sobre">Com anos de experiência e paixão pelo design, criamos bolsas que inspiram confiança e empoderamento. Nossas coleções exclusivas combinam materiais premium, acabamento impecável e detalhes sofisticados.</p>
+            </div>
+        </section>
+
+        <section class="produtos" id="produtos">
+            <div class="produto">
+                    <img src="./src/images/product (1).png" alt="Bolsa elegante na cor creme com alças vinho e detalhes dourados." class="produto-img">
+                <div class="produto-info">
+                    <img src="./src/images/stars.png" alt="avaliação do produto" class="avaliacao">
+                    <p class="produto-valor">R$ 159,90</p>
+                    <button class="btn-cta">Adquira Já</button>
+                </div>
+            </div>
+            <div class="produto">
+                    <img src="./src/images/product (2).png" alt="Bolsa sofisticada bege com acabamentos dourados." class="produto-img">
+                <div class="produto-info">
+                    <img src="./src/images/stars.png" alt="avaliação do produto" class="avaliacao">
+                    <p class="produto-valor">R$ 329,90</p>
+                    <button class="btn-cta">Adquira Já</button>
+                </div>
+            </div>
+            <div class="produto">
+                    <img src="./src/images/product (3).png" alt="Bolsa estilosa branca com alças bege e detalhes dourados." class="produto-img">
+                <div class="produto-info">
+                    <img src="./src/images/stars.png" alt="avaliação do produto" class="avaliacao">
+                    <p class="produto-valor">R$ 249,90</p>
+                    <button class="btn-cta">Adquira Já</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios-container">
+            <div class="beneficio-conteudo fundo-especial">
+                <img src="./src/images/model-image.png" alt="Mulher elegante tomando café com uma bolsa sofisticada ao lado, na calçada." class="img-beneficio">
+
+                <div class="descricao-beneficio">
+                    <h2 class="titulo">Com as nossas bolsas, você vai</h2>
+                    <ul>
+                        <li><span>Se sentir confiante e poderosa</span> sabendo que está usando uma bolsa que é linda e ao mesmo tempo durável.</li>
+                        <li><span>Expressar sua personalidade</span> com uma bolsa que reflita quem você é e o que você gosta.</li>
+                        <li><span>Ter uma peça que vai durar por anos</span> sem precisar se preocupar em comprar uma bolsa nova a cada estação.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="beneficio-conteudo layout-reverso">
+                <img src="./src/images/image-store.png" alt="Interior da loja com várias bolsas elegantes em exibição." class="img-beneficio">
+
+                <div class="descricao-beneficio">
+                    <h2 class="titulo">Elegância e Versatilidade em Cada Detalhe</h2>
+                    <p class="descricao">Descubra a perfeição nas nossas bolsas femininas que combinam elegância e funcionalidade, feitas para acompanhar você em qualquer ocasião.</p>
+                    <ul>
+                        <li><span>Estilo e Durabilidade</span> nossas bolsas combinam materiais de alta qualidade com design sofisticado, garantindo resistência e elegância para qualquer ocasião, seja no trabalho, eventos sociais ou momentos casuais.</li>
+                        <li><span>Versatilidade para Todos os Estilos</span> com design moderno e atemporal, nossas bolsas se adaptam a todas as idades e estilos de vida, oferecendo a opção perfeita para complementar qualquer visual.</li>
+                    </ul>
+                    <button class="btn-cta">Eleve Seu Look</button>
+                </div>
+            </div>
+
+            <div class="beneficio-conteudo">
+                <img src="./src/images/inside-bag.png" alt="Interior de uma bolsa espaçosa com múltiplos compartimentos inteligentes." class="img-beneficio">
+
+                <div class="descricao-beneficio">
+                    <h2 class="titulo">Sofisticação e Funcionalidade em Uma Só Bolsa</h2>
+                    <p class="descricao">Experimente a praticidade e o estilo das nossas bolsas femininas espaçosas e com compartimentos inteligentes.</p>
+                    <ul>
+                        <li><span>Espaço e Organização ao Seu Alcance</span> criadas para proporcionar amplo espaço interno, nossas bolsas permitem que você carregue todos os itens essenciais de forma organizada, desde o laptop até pequenos acessórios.</li>
+                        <li><span>Compartimentos Inteligentes para o Seu Dia a Dia</span> cada bolsa possui compartimentos inteligentes, facilitando a organização dos seus pertences e garantindo praticidade e elegância na sua rotina diária.</li>
+                    </ul>
+                    <button class="btn-cta">Compre Agora</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="testemunhos-container" id="testemunhos">
+            <h2 class="titulo">Bolsas que conquistam corações</h2>
+            <p class="descricao">Veja como as bolsas Lady’s Bag transformam vidas</p>
+            <div class="secao-testemunhos">
+                <div class="testemunho">
+                    <img src="./src/images/stars.png" alt="avaliação do produto" class="avaliacao">
+                    <p>“Desde que comprei minha bolsa na Lady’s Bag, me sinto mais confiante e poderosa em todos os lugares que vou.”</p>
+                    <img src="./src/images/avatar-image (2).png" alt="Foto de perfil do cliente" class="avatar-imagem">
+                    <p class="nome-cliente">Ana Clara</p>
+                    <p class="cargo">Empresária</p>
+                </div>
+                <div class="testemunho">
+                    <img src="./src/images/stars.png" alt="avaliação do produto" class="avaliacao">
+                    <p>"Apaixonada pelas bolsas Lady’s Bag! Alta qualidade, acabamento impecável, variedade de modelos e cores. Um investimento que vale a pena!”</p>
+                    <img src="./src/images/avatar-image (3).png" alt="Foto de perfil do cliente" class="avatar-imagem">
+                    <p class="nome-cliente">Carolina Oliveira</p>
+                    <p class="cargo">Professora</p>
+                </div>
+                <div class="testemunho">
+                    <img src="./src/images/stars.png" alt="avaliação do produto" class="avaliacao">
+                    <p>"A Lady's Bag me conquistou desde o início. As bolsas são elegantes, de alta qualidade e são acessórios versáteis que me acompanham em todos os momentos."</p>
+                    <img src="./src/images/avatar-image (1).png" alt="Foto de perfil do cliente" class="avatar-imagem">
+                    <p class="nome-cliente">Mariana Costa</p>
+                    <p class="cargo">Estudante de Engenharia</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ultima-cta">
+            <h2 class="titulo">Diga adeus às bolsas que te decepcionam e invista em qualidade, estilo e praticidade!</h2>
+            <p class="descricao">Descubra o estilo Lady's Bag bolsas atemporais que complementam seu look para qualquer ocasião!</p>
+            <button class="btn-cta">Clique aqui e garanta já a sua bolsa!</button>
+        </section>
+    </main>
+
+    <footer class="rodape" id="contato">
+        <div class="secao-contato">
+            <div class="logo">
+                <a href="#">
+                    <img src="./src/images/logo.png" alt="Logo Lady's Bag" class="logo-imagem">
+                    <span>Lady’s Bag</span>
+                </a>
+            </div>
+
+            <nav class="navegacao">
+                <ul>
+                    <li class="menu-item"><a href="#inicio">Início</a></li>
+                    <li class="menu-item"><a href="#sobre">Sobre</a></li>
+                    <li class="menu-item"><a href="#produtos">Produtos</a></li>
+                    <li class="menu-item"><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="newsletter">
+                <p class="titulo">Inscreva-se na nossa Newsletter</p>
+                <p class="descricao">Cadastre-se na nossa newsletter e fique por dentro dos nossos lançamentos.</p>
+
+                <div class="secao-cadastro-newsletter">
+                    <input type="email" placeholder="O seu email" required>
+                    <span class="preenchido">Por favor, cheque seu e-mail</span>
+                    <span class="nao-preenchido">Por favor, insira seu e-mail</span>
+                    <button type="submit" class="btn-cadastro-newsletter">Assinar</button>
+                </div>
+            </div>
+        </div>
+        <div class="informacoes">
+
+            <div class="redes-sociais">
+                <a href="https://github.com/Madu-Guimaraes" target="_blank" rel="noreferrer" class="rede-social">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/maducode/" target="_blank" rel="noreferrer" class="rede-social">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div class="creditos-3d">
+                Créditos Modelo 3d: 
+                <a href="https://skfb.ly/oHvTt" target="_blank" rel="noreferrer">"Chanel Leather Bag for Women"</a>
+                por <strong>alitural</strong>, licenciado sob 
+                <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution</a>.
+            </div>
+
+            <ul class="institucional">
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos e Condições</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/js/scene.js"></script>
+    <script src="./src/js/script.js"></script>
+
+    <!-- Include Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.129.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.129.0/examples/js/loaders/GLTFLoader.js"></script>
+
+  <!-- Include GSAP and ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</body>
+</html>

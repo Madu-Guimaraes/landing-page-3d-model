@@ -1,0 +1,150 @@
+.cabecalho .navegacao ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.cabecalho .navegacao ul li,
+.rodape .navegacao ul li {
+    padding-left: 2em;
+}
+
+.cabecalho .navegacao ul li a,
+.rodape .navegacao ul li a {
+    color: #b65b29;
+    font-weight: 560;
+    font-size: 20px;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s
+}
+
+.menu-item a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #b65b29;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.menu-item a:hover::after {
+    width: 100%;
+} 
+
+/* RESPOSIVE */
+
+.cabecalho .menu {
+    display: none;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;  /* coloca o elemento no final da linha*/
+}
+ /* e para essa função funcionar precisa dessa abaixo*/
+.cabecalho .navegacao label {
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho .hamburguer {
+   background-color: #b65b29;
+    position: relative; /* serve para posicionar relativamente e os before e after vao ficar com position absolute. */
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.cabecalho .hamburguer::before,
+.cabecalho .hamburguer::after {
+   background-color: #b65b29;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.cabecalho .hamburguer::before {
+    top: -10px;
+}
+
+.cabecalho .hamburguer::after {
+    bottom: -10px;
+}
+
+.cabecalho input {
+    display: none;
+}
+
+/* quando eu clicar no label ele vai rotacionar  */
+.cabecalho input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.cabecalho input:checked ~ label .hamburguer::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.cabecalho input:checked ~ label .hamburguer::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+@media (max-width: 690px) {
+    .cabecalho .menu {
+        display: block;
+    }
+
+    .cabecalho .navegacao {
+        padding: 5px;
+    }
+
+    .cabecalho .navegacao ul li a,
+    .rodape .navegacao ul li a {
+        color: #974b22;
+    }
+
+    .cabecalho .navegacao ul {
+        display: none;
+    }
+
+    .cabecalho input:checked ~ ul {
+        display: block;
+        margin-left: 65%;
+    }
+
+    .cabecalho .navegacao ul li {
+        padding-left: 0;
+    }
+
+    .cabecalho .navegacao {
+        position: absolute;
+        display: block;
+        top: 2px;
+        margin-top: 4%;
+        right: 20px;
+        z-index: 1; /* deixa o elemento acima de tudo, facilitando no momento do user clicar no elemento dito*/
+    }
+
+    .cabecalho .navegacao ul {
+        width: 45%;
+        background-color: #f3a276;
+        border-radius: 30px;
+        padding: 3px 0;
+    }
+
+    .cabecalho .navegacao ul a {
+        text-align: center;
+        margin: 20%;
+        display: block;
+    }
+}

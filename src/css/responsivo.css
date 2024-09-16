@@ -1,0 +1,509 @@
+@media (max-width: 1024px) {
+    body {
+        margin: 0;
+        padding: 3%;
+    }
+
+    .inicio {
+        padding: 0;
+        justify-content: flex-start;
+        margin-top: 2px;
+        height: auto;
+        margin-bottom: 50%;
+    }
+   
+    .titulo,
+    h3 {
+        font-size: 40px;
+    }
+
+    .conteudo-inicio {
+        text-align: center;
+    }
+
+    .conteudo-inicio {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .sobre {
+        flex-direction: row;
+    }
+
+    .produtos {
+        justify-content: center;
+        height: auto;
+    }
+
+    .produto-info,
+    .secao-btn-cta,
+    .beneficio-conteudo,
+    .beneficio-conteudo.layout-reverso,
+    .secao-testemunhos,
+    .secao-cadastro-newsletter,
+    .secao-contato {
+        flex-direction: column;
+    }
+
+    .produto-img {
+        width: 90%;
+    }
+
+    .produtos,
+    .produto-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-cta {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        width: 270px;
+        height: 55px;
+    }
+
+
+    .beneficios-container {
+        height: auto;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .beneficio-conteudo,
+    .beneficio-conteudo.layout-reverso {
+        height: auto;
+    }
+
+    .img-beneficio {
+        height: auto;
+        width: 80%;
+    }
+
+    .descricao-beneficio {
+        height: auto;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .descricao-beneficio .titulo {
+        font-size: 150%;
+    }
+
+    .descricao-beneficio .titulo,
+    .descricao-beneficio ul,
+    .descricao-beneficio .descricao,
+    .testemunhos-container .descricao,
+    .ultima-cta .titulo,
+    .ultima-cta .descricao,
+    .newsletter .titulo,
+    .newsletter .descricao,
+    .secao-cadastro-newsletter,
+    .secao-cadastro-newsletter input {
+        width: 100%;
+    }
+
+    .testemunhos-container {
+        height: auto;
+    }
+
+    .testemunho {
+        width: 50%;
+    }
+
+    .secao-contato {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .secao-contato .logo-imagem {
+        width: 20%;
+    }
+
+    .secao-contato .logo a {
+        justify-content: flex-start;
+    }
+
+    .rodape .logo-imagem,
+    .rodape .navegacao,
+    .rodape .newsletter {
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+    input {
+        margin-bottom: 25px;
+    }
+
+    .rodape .logo,
+    .rodape .navegacao,
+    .rodape .newsletter,
+    .rodape .informacoes .redes-sociais {
+        margin-bottom: 20px;
+    }
+
+    .rodape .navegacao ul {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .rodape .navegacao .menu-item {
+        padding: 30px 30px 30px 0;
+    }
+
+    .rodape .informacoes {
+        flex-direction: column;
+        margin: 1em;
+        text-align: center;
+    }
+   
+}
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 3%;
+    }
+
+    .inicio {
+        padding: 0;
+        justify-content: flex-start;
+        margin-top: 2px;
+        height: auto;
+        margin-bottom: 80%;
+    }
+   
+    .titulo,
+    h3 {
+        font-size: 40px;
+    }
+
+    .conteudo-inicio {
+        text-align: center;
+    }
+
+    .conteudo-inicio {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .produtos {
+        justify-content: center;
+        height: auto;
+    }
+
+    .secao-btn-cta,
+    .produtos,
+    .produto,
+    .produto-info,
+    .beneficio-conteudo,
+    .beneficio-conteudo.layout-reverso,
+    .secao-testemunhos,
+    .secao-cadastro-newsletter,
+    .secao-contato {
+        flex-direction: column;
+    }
+
+    .produto,
+    .produto-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-cta {
+        margin: 0 0 20px 0;
+        font-size: 16px;
+        width: 270px;
+        height: 55px;
+    }
+
+
+    .beneficios-container {
+        height: auto;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .beneficio-conteudo,
+    .beneficio-conteudo.layout-reverso {
+        height: auto;
+    }
+
+    .img-beneficio {
+        height: auto;
+        width: 100%;
+    }
+
+    .descricao-beneficio {
+        height: auto;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .descricao-beneficio .titulo {
+        font-size: 150%;
+    }
+
+    .descricao-beneficio .titulo,
+    .descricao-beneficio ul,
+    .descricao-beneficio .descricao,
+    .testemunhos-container .descricao,
+    .ultima-cta .titulo,
+    .ultima-cta .descricao,
+    .newsletter .titulo,
+    .newsletter .descricao,
+    .secao-cadastro-newsletter,
+    .secao-cadastro-newsletter input {
+        width: 100%;
+    }
+
+    .testemunhos-container {
+        height: auto;
+    }
+
+    .testemunho {
+        width: 50%;
+    }
+
+    .secao-contato {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .secao-contato .logo-imagem {
+        width: 20%;
+    }
+
+    .secao-contato .logo a {
+        justify-content: flex-start;
+    }
+
+    .rodape .logo-imagem,
+    .rodape .navegacao,
+    .rodape .newsletter {
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+    input {
+        margin-bottom: 25px;
+    }
+
+    .rodape .logo,
+    .rodape .navegacao,
+    .rodape .newsletter,
+    .rodape .informacoes .redes-sociais {
+        margin-bottom: 20px;
+    }
+
+    .rodape .navegacao ul {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .rodape .navegacao .menu-item {
+        padding: 30px 30px 30px 0;
+    }
+
+    .rodape .informacoes {
+        flex-direction: column;
+        margin: 1em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        margin: 0;
+        padding: 3%;
+    }
+
+    .cabecalho .logo-imagem {
+        width: 20%;
+    }
+
+    .logo span {
+        width: 40%;
+    }
+
+    .logo a {
+        justify-content: flex-start;
+    }
+
+    .inicio {
+        padding: 0;
+        height: auto;
+    }
+
+    .conteudo-inicio,
+    .descricao-btn,
+    .conteudo-sobre,
+    .descricao-beneficio,
+    .secao-testemunhos {
+        text-align: center;
+    }
+
+    .secao-testemunhos {
+        width: auto;
+    }
+
+    .descricao-btn {
+        font-size: 13px;
+    }
+
+    .conteudo-inicio {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .titulo,
+    h3 {
+        font-size: 170%;
+        line-height: 40px;
+    }
+
+    h3 {
+        width: 100%;
+    }
+
+    .secao-btn-cta,
+    .produtos,
+    .produto,
+    .produto-info,
+    .beneficio-conteudo,
+    .beneficio-conteudo.layout-reverso,
+    .secao-testemunhos,
+    .secao-cadastro-newsletter,
+    .secao-contato {
+        flex-direction: column;
+    }
+
+    .secao-btn-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-cta {
+        margin: 0 0 20px 0;
+        width: 250px;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .sobre {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .descricao-sobre {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .produtos {
+        justify-content: center;
+        height: auto;
+    }
+
+    .produto,
+    .produto-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .beneficios-container {
+        height: auto;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .beneficio-conteudo,
+    .beneficio-conteudo.layout-reverso {
+        height: auto;
+    }
+
+    .img-beneficio {
+        height: auto;
+        width: 100%;
+    }
+
+    .descricao-beneficio {
+        align-items: center;
+    }
+
+    .descricao-beneficio .titulo {
+        font-size: 150%;
+    }
+
+    .descricao-beneficio .titulo,
+    .descricao-beneficio ul,
+    .descricao-beneficio .descricao,
+    .testemunhos-container .descricao,
+    .ultima-cta .titulo,
+    .ultima-cta .descricao,
+    .newsletter .titulo,
+    .newsletter .descricao,
+    .secao-cadastro-newsletter,
+    .secao-cadastro-newsletter input {
+        width: 100%;
+    }
+
+    .testemunhos-container,
+    .descricao-beneficio {
+        height: auto;
+        padding: 0;
+    }
+
+    .testemunho, .ultima-cta {
+        width: auto;
+        padding: 0;
+    }
+
+    .secao-contato {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .secao-contato .logo-imagem {
+        width: 30%;
+    }
+
+    .rodape .logo-imagem,
+    .rodape .navegacao,
+    .rodape .newsletter {
+        margin-left: 0;
+        align-items: flex-start;
+    }
+
+    input {
+        margin-bottom: 25px;
+    }
+
+    .rodape .logo,
+    .rodape .navegacao,
+    .rodape .newsletter,
+    .rodape .informacoes .redes-sociais {
+        margin-bottom: 20px;
+    }
+
+    .rodape,
+    .rodape .navegacao .menu-item{
+        padding: 2px;
+    }
+
+    .rodape .informacoes {
+        flex-direction: column;
+        margin: 1em;
+        text-align: center;
+    }
+
+    .rodape .navegacao ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
