@@ -6,127 +6,153 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("root-3d-bolsa").appendChild(renderer.domElement);
 
 let object;
+let modeloCarregado = false;
 
 // Função para ajustar a escala e posição do modelo 3D com base na largura da tela
 function ajustarEscalaEPosicao() {
-    if (window.matchMedia("(max-width: 425px)").matches) {
-        object.scale.set(8, 8, 8); // Escala final para telas pequenas
-        object.position.set(0, -3.9, 0); // Posição final na seção "sobre" para telas pequenas
-    }else if (window.matchMedia("(max-width: 768px)").matches) {
-        object.scale.set(11, 11, 11); // Escala final para tablets
-        object.position.set(0, -3, 0); // Posição final na seção "sobre" para tablets
-    } else if (window.matchMedia("(max-width: 1024px)").matches) {
-        object.scale.set(15, 15, 15); // Escala final para desktops menores
-        object.position.set(0, -3, 0); // Posição final na seção "sobre" para desktops menores
-    } else {
-        object.position.set(7, -3, 0); // Posição inicial da bolsa
-        object.scale.set(14, 14, 14); // Tamanho inicial da bolsa
+    if (object) {
+        if (window.matchMedia("(max-width: 425px)").matches) {
+            object.scale.set(8, 8, 8); // Escala final para telas pequenas
+            object.position.set(0, -3.9, 0); // Posição final na seção "sobre" para telas pequenas
+        } else if (window.matchMedia("(max-width: 768px)").matches) {
+            object.scale.set(11, 11, 11); // Escala final para tablets
+            object.position.set(0, -3, 0); // Posição final na seção "sobre" para tablets
+        } else if (window.matchMedia("(max-width: 1024px)").matches) {
+            object.scale.set(15, 15, 15); // Escala final para desktops menores
+            object.position.set(0, -3, 0); // Posição final na seção "sobre" para desktops menores
+        } else {
+            object.position.set(7, -3, 0); // Posição inicial da bolsa
+            object.scale.set(14, 14, 14); // Tamanho inicial da bolsa
+        }
     }
 }
 
 // Carrega o modelo GLTF
 const loader = new THREE.GLTFLoader();
-loader.load(
-    `src/public/scene.gltf`,
-    function (gltf) {
-        object = gltf.scene;
-        console.log("Modelo carregado:", object);
-        scene.add(object);
 
-        // Inicializa a posição e a escala
-        ajustarEscalaEPosicao(); // Ajusta a escala e a posição de acordo com a largura da tela
+function carregarModelo() {
+    loader.load(
+        `src/public/scene.gltf`,
+        function (gltf) {
+            object = gltf.scene;
+            console.log("Modelo carregado:", object);
+            scene.add(object);
 
-        // Registra o ScrollTrigger no GSAP
-        gsap.registerPlugin(ScrollTrigger);
+            // Inicializa a posição e a escala
+            ajustarEscalaEPosicao(); // Ajusta a escala e a posição de acordo com a largura da tela
 
-        // Animação da rotação da bolsa com base no scroll
-        gsap.to(object.rotation, {
-            y: Math.PI * 2, // Gira 360°
-            scrollTrigger: {
-                trigger: document.querySelector("#inicio"),
-                start: "top top",
-                endTrigger: document.querySelector("#inicio"),
-                end: "top top", // Ajusta o final para antes de chegar na seção "sobre"
-                scrub: 3,
-            }
-        });
+            // Registra o ScrollTrigger no GSAP
+            gsap.registerPlugin(ScrollTrigger);
 
-        // Animação da posição e visibilidade com base no scroll
-        gsap.to(object.position, {
-            x: window.matchMedia("(min-width: 1025px)").matches ? -6 : 0, // Move para o canto esquerdo ou mantém centralizado
-            y: window.matchMedia("(min-width: 1025px)").matches ? 2 : 0, // Ajuste vertical ou mantém no centro
-            scrollTrigger: {
-                trigger: document.querySelector("#inicio"),
-                start: "top top",
-                endTrigger: document.querySelector("#sobre"),
-                end: "bottom center", // Ajusta o final para o final da seção "sobre"
-                scrub: 3,
-                onUpdate: (self) => {
-                    const progress = self.progress;
-                    object.rotation.y = progress * Math.PI * 2; // Gira 360° com base no progresso
-                    if (!window.matchMedia("(max-width: 768px)").matches) {
-                        const scaleAdjustment = window.matchMedia("(min-width: 1025px)").matches ? progress * 3 : 0;
-                        object.scale.set(13 + scaleAdjustment, 13 + scaleAdjustment, 13 + scaleAdjustment); // Aumenta a escala
+            // Animação da rotação da bolsa com base no scroll
+            gsap.to(object.rotation, {
+                y: Math.PI * 2, // Gira 360°
+                scrollTrigger: {
+                    trigger: document.querySelector("#inicio"),
+                    start: "top top",
+                    endTrigger: document.querySelector("#inicio"),
+                    end: "top top", // Ajusta o final para antes de chegar na seção "sobre"
+                    scrub: 3,
+                }
+            });
+
+            // Animação da posição e visibilidade com base no scroll
+            gsap.to(object.position, {
+                x: window.matchMedia("(min-width: 1025px)").matches ? -6 : 0, // Move para o canto esquerdo ou mantém centralizado
+                y: window.matchMedia("(min-width: 1025px)").matches ? 2 : 0, // Ajuste vertical ou mantém no centro
+                scrollTrigger: {
+                    trigger: document.querySelector("#inicio"),
+                    start: "top top",
+                    endTrigger: document.querySelector("#sobre"),
+                    end: "bottom center", // Ajusta o final para o final da seção "sobre"
+                    scrub: 3,
+                    onUpdate: (self) => {
+                        const progress = self.progress;
+                        object.rotation.y = progress * Math.PI * 2; // Gira 360° com base no progresso
+                        if (!window.matchMedia("(max-width: 768px)").matches) {
+                            const scaleAdjustment = window.matchMedia("(min-width: 1025px)").matches ? progress * 3 : 0;
+                            object.scale.set(13 + scaleAdjustment, 13 + scaleAdjustment, 13 + scaleAdjustment); // Aumenta a escala
+                        }
+                    },
+                    onComplete: () => {
+                        ajustarEscalaEPosicaoNaSobre();
+                        object.rotation.y = 0; // Parar a rotação e garantir que fique de frente
+                    }
+                }
+            });
+
+            // Controle de visibilidade do modelo 3D ao se aproximar da seção "produtos"
+            gsap.to(object, {
+                scrollTrigger: {
+                    trigger: document.querySelector("#produtos"),
+                    start: "top center",
+                    end: "bottom center", 
+                    scrub: 1,
+                    onEnter: () => {
+                        object.visible = false; // Esconde o modelo 3D
+                    },
+                    onLeaveBack: () => {
+                        object.visible = true; // Mostra o modelo 3D novamente quando volta ao topo
+                    }
+                }
+            });
+
+            // Lógica para esconder o modelo 3D quando a seção "sobre" aparecer e mostrá-lo novamente no "inicio"
+            ScrollTrigger.create({
+                trigger: document.querySelector("#sobre"),
+                start: "top center", // Quando a seção "sobre" começar a aparecer
+                end: "bottom center",
+                onEnter: () => {
+                    if (window.matchMedia("(max-width: 1024px)").matches) {
+                        object.visible = false; // Esconde o modelo 3D
                     }
                 },
-                onComplete: () => {
-                    ajustarEscalaEPosicaoNaSobre();
-                    object.rotation.y = 0; // Parar a rotação e garantir que fique de frente
-                }
-            }
-        });
-
-        // Controle de visibilidade do modelo 3D ao se aproximar da seção "produtos"
-        gsap.to(object, {
-            scrollTrigger: {
-                trigger: document.querySelector("#produtos"),
-                start: "top center",
-                end: "bottom center", 
-                scrub: 1,
-                onEnter: () => {
-                    object.visible = false; // Esconde o modelo 3D
-                },
                 onLeaveBack: () => {
-                    object.visible = true; // Mostra o modelo 3D novamente quando volta ao topo
+                    object.visible = true; // Mostra o modelo 3D novamente quando voltar ao "inicio"
                 }
-            }
-        });
+            });
+        },
+        undefined,
+        function (error) {
+            console.error("Erro ao carregar o modelo:", error);
+        }
+    );
+}
 
-        // Lógica para esconder o modelo 3D quando a seção "sobre" aparecer e mostrá-lo novamente no "inicio"
-        ScrollTrigger.create({
-            trigger: document.querySelector("#sobre"),
-            start: "top center", // Quando a seção "sobre" começar a aparecer
-            end: "bottom center",
-            onEnter: () => {
-                if (window.matchMedia("(max-width: 1024px)").matches) {
-                    object.visible = false; // Esconde o modelo 3D
-                }
-            },
-            onLeaveBack: () => {
-                object.visible = true; // Mostra o modelo 3D novamente quando voltar ao "inicio"
+// Função para carregar o modelo quando necessário
+function carregarModeloQuandoVisivel() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !modeloCarregado) {
+                carregarModelo();
+                modeloCarregado = true; // Marca o modelo como carregado
+                observer.disconnect(); // Desconectar o observador após o carregamento
             }
         });
-    },
-    undefined,
-    function (error) {
-        console.error("Erro ao carregar o modelo:", error);
-    }
-);
+    });
+
+    observer.observe(document.querySelector("#root-3d-bolsa"));
+}
+
+// Carrega o modelo quando o elemento se torna visível
+carregarModeloQuandoVisivel();
 
 // Função para ajustar escala e posição na seção "sobre"
 function ajustarEscalaEPosicaoNaSobre() {
-    if (window.matchMedia("(max-width: 425px)").matches) {
-        object.scale.set(8, 8, 8); // Escala final para telas pequenas
-        object.position.set(0, -2, 0); // Posição final na seção "sobre" para telas pequenas
-    } else if (window.matchMedia("(max-width: 768px)").matches) {
-        object.scale.set(11, 11, 11); // Escala final para tablets
-        object.position.set(0, -3, 0); // Posição final na seção "sobre" para tablets
-    } else if (window.matchMedia("(max-width: 1024px)").matches) {
-        object.scale.set(15, 15, 15); // Escala final para desktops menores
-        object.position.set(0, -1, 0); // Posição final na seção "sobre" para desktops menores
-    } else {
-        object.scale.set(14, 14, 14); // Escala final para desktops maiores
-        object.position.set(4, 0, 0); // Posição final na seção "sobre" para desktops maiores
+    if (object) {
+        if (window.matchMedia("(max-width: 425px)").matches) {
+            object.scale.set(8, 8, 8); // Escala final para telas pequenas
+            object.position.set(0, -2, 0); // Posição final na seção "sobre" para telas pequenas
+        } else if (window.matchMedia("(max-width: 768px)").matches) {
+            object.scale.set(11, 11, 11); // Escala final para tablets
+            object.position.set(0, -3, 0); // Posição final na seção "sobre" para tablets
+        } else if (window.matchMedia("(max-width: 1024px)").matches) {
+            object.scale.set(15, 15, 15); // Escala final para desktops menores
+            object.position.set(0, -1, 0); // Posição final na seção "sobre" para desktops menores
+        } else {
+            object.scale.set(14, 14, 14); // Escala final para desktops maiores
+            object.position.set(4, 0, 0); // Posição final na seção "sobre" para desktops maiores
+        }
     }
 }
 
