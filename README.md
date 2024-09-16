@@ -4,7 +4,9 @@
 
 ## Visão Geral 💡
 
-**Lady's Bag** é uma landing page interativa e moderna, desenvolvida para destacar uma coleção de bolsas elegantes e versáteis. A página combina um design visualmente atraente com animações 3D sofisticadas, proporcionando uma experiência de navegação imersiva e envolvente para o usuário. O projeto foi criado com o objetivo de explorar e testar diversas bibliotecas, como Three.js e GSAP, ampliando o conhecimento sobre renderização 3D e animações dinâmicas no contexto web.
+🚀 Lady's Bag: Meu primeiro projeto pessoal, uma landing page interativa e moderna, desenvolvida para destacar uma coleção de bolsas elegantes e versáteis.
+
+Esta página combina um design visualmente atraente com animações 3D sofisticadas, proporcionando uma experiência de navegação envolvente e imersiva. O projeto me permitiu explorar e testar novas tecnologias, como Three.js para renderização 3D e GSAP para animações dinâmicas, ampliando meu conhecimento em criação de experiências web inovadoras.
 
 ## Funcionalidades ⚙️
 
