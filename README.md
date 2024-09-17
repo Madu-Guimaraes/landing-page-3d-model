@@ -128,4 +128,4 @@ Esta página combina um design visualmente atraente com animações 3D sofistica
 
 ## Link para o deploy 🌐
 
-[Projeto Lady's Bag - Landing Page]()
+[Projeto Lady's Bag - Landing Page](https://madu-guimaraes.github.io/landing-page-3d-model/)
